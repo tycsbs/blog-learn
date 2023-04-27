@@ -13,7 +13,7 @@ jobs:
             # 获取源码
             - name: 迁出代码
               # 使用action库  actions/checkout获取源码
-              uses: actions/checkout@main
+              uses: actions/checkout@master
 
             # 安装Node10
             - name: 安装node.js
@@ -39,7 +39,7 @@ jobs:
                   # scp参数
                   ARGS: '-avzr --delete'
                   # 源目录
-                  SOURCE: '.vitepress/dist'
+                  SOURCE: 'dist'
                   # 服务器ip：换成你的服务器IP
                   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
                   # 用户
