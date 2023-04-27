@@ -29,33 +29,13 @@
 
 ### 2017 Github 图鉴之最流行语言 PR 排名
 
-![2017 Github 图鉴之最流行语言 PR 排名.png | center | 747x560](https://user-gold-cdn.xitu.io/2018/10/7/1664ea1d7257389d?w=1485&h=1114&f=png&s=120194 "")
-
-
 Github 把 Node 相关的项目也归属到了 Javascript 里面，所以上图并没有出现 Node，但是在 Github 上被 Review 最多和被讨论最多的项目中，都有 Node 的身影，同时被 Fork 最多和贡献者数量最多的项目中，至少有 30% 的项目，都是强依赖 Node 的，比如 React、Vue、ReactNative 等，Javascript 生态的繁荣是建立在 Node 这一革命性工具上的：
 
 ### 2017 Github 图鉴之项目热度排名
 
-![2017 Github 图鉴之项目热度排名.png | center | 747x283](https://user-gold-cdn.xitu.io/2018/10/7/1664ea1da0d3c9b6?w=1982&h=750&f=png&s=257898 "")
-
-
 换句话讲，没有 Node，就没有 Javascript 各种全家桶的今天，当然没有 Javascript（ECMA）标准规范的支撑，同样没有 Node 今天的生态蓬勃，作为佐证，可以看下 Google 的搜索趋势（Trends），也就是全球开发者关心某项技术的程度，曲线反映了这项技术的热度，越接近 100，热度越高，可以发现 Node 自 2009 年面世以来，热度整体在持续上升，只不过在中国，晚了两三年时间。
 
 ### 谷歌 Nodejs - 美国 9 年热度变化趋势图
-
-![谷歌 Nodejs - 美国 9 年热度变化趋势图.png | center | 747x312](https://user-gold-cdn.xitu.io/2018/10/7/1664ea1d58680798?w=1150&h=481&f=png&s=62597 "")
-
-
-
-![谷歌 Nodejs - 中国 9 年热度变化趋势图.png | center | 747x312](https://user-gold-cdn.xitu.io/2018/10/7/1664ea1d65607578?w=1150&h=480&f=png&s=63260 "")
-
-
-对比下图 Javascript（红色） 和 Node（蓝色），也可以发现两者在热度上也基本保持一样的趋势。
-
-
-
-![谷歌 Nodejs - 中国 9 年热度变化趋势对比图.png | center | 747x312](https://user-gold-cdn.xitu.io/2018/10/7/1664ea1d67365c58?w=1151&h=481&f=png&s=74559 "")
-
 
 还有更多有趣的数字，大家可以点击查看 [2016 Github Octoverse](https://octoverse.github.com/2017/)、[2017 Github Octoverse](https://octoverse.github.com/2016/) 和 搜索 [Google Trends](https://trends.google.com/trends/explore?date=2009-10-01%202018-10-01&geo=US&q=nodejs)，那么 [2018 Github Octoverse 最新公布的项目情况](https://octoverse.github.com/)，也建议大家特别关注下，来跟 2017 作对比，这些靠前的项目，哪些是离不开 Node 的支撑的：
 
