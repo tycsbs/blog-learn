@@ -17,8 +17,8 @@ jobs:
 
             # 安装依赖
             - name: 安装依赖
-              run: pnpm install
+              run: yarn install
 
             # 打包
             - name: 打包
-              run: pnpm run build
+              run: yarn run build
