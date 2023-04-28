@@ -38,7 +38,6 @@ export default defineConfig({
 
 function nav() {
     return [
-        { text: 'github', link: 'https://github.com/tycsbs/', target: '_blank' },
-        { text: 'Node架构', link: '/NodeJS/section13.md' }
+        { text: 'github', link: 'https://github.com/tycsbs/', target: '_blank' }
     ]
 }
