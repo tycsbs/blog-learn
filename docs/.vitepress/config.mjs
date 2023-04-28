@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: '白米饭的前端小册子',
     themeConfig: {
-        // nav: nav(),
+        nav: nav(),
         sidebar: {
             '/NodeJS/': [
                 {
@@ -38,7 +38,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        { text: 'Guide1', link: '/NodeJS/section1.md' },
-        { text: 'Guide2', link: '/NodeJS/section2.md' }
+        { text: 'github', link: 'https://github.com/tycsbs/', target: '_blank' },
+        { text: 'Node架构', link: '/NodeJS/section13.md' }
     ]
 }
