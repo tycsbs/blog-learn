@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     title: '白米饭的前端小册子',
-    outDir: '../dist',
     themeConfig: {
         // nav: nav(),
         sidebar: {
