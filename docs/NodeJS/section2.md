@@ -7,7 +7,7 @@
 ## 名词概念解释
 
 * JS 对 JavaScript 的简称，实际意义与 JavaScript 相同
-* JavasScript 通用叫法，代指实现了 `<span data-type="color" style="color:rgba(0, 0, 0, 0.8)"><span data-type="background" style="background-color:rgb(252, 252, 252)"`>ECMAScript 标准的任何语言版本</span></span>
+* JavasScript 通用叫法，代指实现了 <span data-type="color" style="color:rgba(0, 0, 0, 0.8)"><span data-type="background" style="background-color:rgb(252, 252, 252)">ECMAScript 标准的任何语言版本</span></span>
 * ES 对 ECMAScript 的简称，实际意义与 ECMAScript 相同
 * ECMAScript  [欧洲计算机制造商协会](http://www.ecma-international.org/) 对 Javascript 语言制定的工业标准，随着时间推移版本不断更新，如 ES3/4/5
 * ES2/3/4/5 是语言标准的版本，ES2015/ES2016 是发布标准的年份称谓，如 ES2015/ES6 意义等同
