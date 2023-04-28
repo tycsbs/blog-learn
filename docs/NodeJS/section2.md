@@ -1,6 +1,4 @@
-#  [命令行动画龟兔赛跑] Node 的语言基础 - JS（ES5/6/7/8）
-
-![image.png | left | 826x102](https://user-gold-cdn.xitu.io/2018/10/13/1666e1b31fda4c77?w=2508&h=310&f=png&s=98394 "")
+# [命令行动画龟兔赛跑] Node 的语言基础 - JS（ES5/6/7/8）
 
 ```!
 本节目标：【实现一个龟兔赛跑小动画】 - 没有金刚钻，不揽瓷器活，必要的 JS 知识是学习 Node 的第一板斧。
@@ -9,7 +7,7 @@
 ## 名词概念解释
 
 * JS 对 JavaScript 的简称，实际意义与 JavaScript 相同
-* JavasScript 通用叫法，代指实现了 <span data-type="color" style="color:rgba(0, 0, 0, 0.8)"><span data-type="background" style="background-color:rgb(252, 252, 252)">ECMAScript 标准的任何语言版本</span></span>
+* JavasScript 通用叫法，代指实现了 `<span data-type="color" style="color:rgba(0, 0, 0, 0.8)"><span data-type="background" style="background-color:rgb(252, 252, 252)"`>ECMAScript 标准的任何语言版本</span></span>
 * ES 对 ECMAScript 的简称，实际意义与 ECMAScript 相同
 * ECMAScript  [欧洲计算机制造商协会](http://www.ecma-international.org/) 对 Javascript 语言制定的工业标准，随着时间推移版本不断更新，如 ES3/4/5
 * ES2/3/4/5 是语言标准的版本，ES2015/ES2016 是发布标准的年份称谓，如 ES2015/ES6 意义等同
@@ -27,7 +25,6 @@
 
 * [Mozilla 文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)
 * [阮老师的 ES6 入门](http://es6.ruanyifeng.com/#docs/intro)
-
 
 <div class="bi-table">
   <table>
@@ -166,14 +163,11 @@ for (const dependency of module.dependencies) {}
   </table>
 </div>
 
-
 除了上面这些，还有 Class/Async Function/Generator Function 等等许许多多的特性，不再一一列举。
 
 ### 编程练习 - 实现一个命令行龟兔赛跑动画
 
 我们来基于上面的知识结果，可以借助 chalk-animation 模块，来实现一个在命令行的进度条动画 - 龟兔赛跑，先看下效果：
-
-![QQ20181007-185354.gif | center | 807x55](https://user-gold-cdn.xitu.io/2018/10/13/1666e1b3201f96d8?w=420&h=29&f=gif&s=627833 "")
 
 要实现这样一个效果，思路是很简单的，就是不断的去刷新当前的终端日志就可以了，所以本质上是把字符串按照我们计算的规则，每隔比如 1 秒钟，就刷新一下进度，至于龟兔，控制好它俩在的几个状态就行。
 
@@ -202,7 +196,6 @@ for (const dependency of module.dependencies) {}
 ```
 
 那我们首先可以用很简陋的代码来实现这个逻辑，让兔子速度是乌龟的 3 倍，等待 2 秒后，它俩开始离开起点，每隔 150 毫秒，就计算下它俩走多远了，也就是速度 x 轮询的次数，比如 450 毫秒后，乌龟走过去了三米，兔子走过去了九米距离，那么第一次写的代码可能就是这样的比较挫的代码：
-
 
 ```javascript
 // 声明 2 个比赛队员
@@ -406,6 +399,7 @@ const proxy = new Proxy(Race, {
 
 proxy()
 ```
+
 除了 class，还增加了一些 rest 参数，解构赋值等，但依然实现过程比较猥琐且过度设计，大家能 Get 到 `语法特性能带来一些编程实现方式的差异性` 这一点，这一章节的目的就达到了。
 
 ## 思考

@@ -4,8 +4,6 @@
 本节目标：[各种手段请求爬取网页内容] 你请求，我应答，网络两头乐开花，Node 之所以成为服务器方案，离不开 HTTP 模块的能力之帆。
 ```
 
-![](https://user-gold-cdn.xitu.io/2018/11/25/1674a427a4074790?w=1738&h=506&f=png&s=102377)
-
 在 Node 里面，起一个 HTTP Server 非常简单，如官网示例：
 
 ```javascript
@@ -263,9 +261,6 @@ run(url)
 
 请求一个网页就是获取一个远程 HTML 文件内容，跟上面我们获取 JSON 没有本质区别，拿到网页源码后，可以通过 cheerio 来加载源码遍历 DOM 节点，选择目标的 HTML 元素，从而获得期望的内容，比如文本或者链接，我们拿 [Node 的 Code + Learn](https://nodejs.org/en/get-involved/code-and-learn/) 页面为例，分析页面的 DOM 节点，左侧的菜单都是 aside 元素里的 li，每个 li 是一个 a 标签，我们只需要获取 a 标签就行了，这个通过 cheerio 可以很轻松的做到：
 
-
-![](https://user-gold-cdn.xitu.io/2018/11/25/1674a59a3ab24a50?w=1847&h=631&f=png&s=204883)
-
 我们拿到源码后，可以从 DOM 中拿到左侧的菜单内容，那么代码可以这样写：
 
 ```javascript
@@ -321,8 +316,6 @@ run()
 
 有了上面的准备工作，我们可以挑战下难一点的任务，Node 版本之间有差异这个我们是知道的，即便是对于同一个模块的同一个 API，也会随着版本而发生变化，甚至有的 API 是逐渐废弃掉不再使用，我们实现一个爬虫，来指定某些 Node 版本，爬取它们里面会逐步废弃的 API 都有哪些，先来看下效果：
 
-
-![](https://user-gold-cdn.xitu.io/2018/11/25/1674a99d94e3f394?w=2450&h=1376&f=png&s=288639)
 
 代码我们可以这样实现：
 
@@ -520,9 +513,6 @@ getHomePage('https://juejin.im/books').then(v => {})
 ```
 
 会得到这样的一个截图：
-
-
-![](https://user-gold-cdn.xitu.io/2018/11/25/1674a582e19cb306?w=1080&h=250&f=png&s=93725)
 
 ### 编程练习 2 - 实现掘金小册的统计工具
 

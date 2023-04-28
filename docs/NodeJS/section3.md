@@ -5,9 +5,6 @@
 本节目标：【实现一个视频时长统计工具】，你包我包他的包，依赖加载怎么搞，模块关系的组织与加载是 Node 中 JS 动态语言处理的一大利器。
 ```
 
-
-![image.png | left | 826x336](https://user-gold-cdn.xitu.io/2018/10/13/1666e1c994e8688d?w=1906&h=776&f=png&s=144120 "")
-
 Node 世界，一切（独立 JS 文件）皆模块，模块之间互相隔离互不影响，通过引用来互相调用。
 
 一个模块本质是一个模块对象，通过 module.exports（exports 只是 module.exports 的一个引用）对外暴露接口，比如创建一个 step.js：
@@ -494,8 +491,6 @@ Module._resolveFilename = function(request, parent, isMain, options) {};
 ```
 
 那么我们平时手写的 JS 代码，包括 node_modules 下的代码，就会被这个 CJS Loader 给接管了，拿到代码后的第一件事就是对它包裹一个函数表达式，传入一些变量，我们可以在 node 命令行模式下，输入 `require('module').wrap.toString()` 和 `require('module').wrapper` 来查看到包裹的方法：
-
-![](https://user-gold-cdn.xitu.io/2018/10/18/16686add1c977b65?w=2876&h=742&f=png&s=158713)
 
 我们可以拿一段 webpack 源代码举例：
 

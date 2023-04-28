@@ -3,8 +3,6 @@
 本节目标：[开发一个查看 Node LTS 版本的命令行工具] 一沙一世界，模块成就雄伟工程，而模块的窝身之处就是包的海洋，也就是 NPM 所连接和管理的工具天堂。
 ```
 
-![](https://user-gold-cdn.xitu.io/2018/10/24/166a5e46cbfdf315?w=1329&h=372&f=png&s=106435)
-
 Node 世界里，一切皆模块，而安装模块，皆是 `npm i` （也就是 `npm install` 的缩写）。
 
 `npm install` 想必是我们接触 Node 后，最先 Get 到的命令，它往往跟随 Node 大版本同时安装到本地，所以当你 `which node` 和 `which npm` 查看时：
@@ -429,12 +427,9 @@ yarn-error.log
 
 这样准备工作的 1/2 步就好了，如果 Github 上创建了项目:
 
-![](https://user-gold-cdn.xitu.io/2018/12/2/1676c7e2a696ac62?w=1454&h=1006&f=png&s=159662)
 
 可以再把本地的项目和线上 repo 做关联：
 
-
-![](https://user-gold-cdn.xitu.io/2018/12/2/1676c7f8b24c6e0f?w=1272&h=910&f=png&s=171812)
 
 或者把空仓库拉下来，我们在空仓库里，增加上述文件，再进行后面的操作。
 
@@ -717,8 +712,6 @@ npm i ./ -g
 安装后，测试下 `ltsn 10`，会拿到这样一个截图：
 
 
-![](https://user-gold-cdn.xitu.io/2018/12/1/1676a3392c714b3e?w=1320&h=302&f=png&s=49641)
-
 
 ##### 6. npm publish 发布包
 
@@ -825,8 +818,6 @@ added 28 packages from 18 contributors in 5.526s
 ltsn 1.1.0
 ~ ltsn 8
 ```
-
-![](https://user-gold-cdn.xitu.io/2018/12/2/1676cb3a7e3dba85?w=1422&h=800&f=png&s=140465)
 
 可以看到打印的表格里，多了 API 这一栏，同时 ltsn 的版本也升级到了 `1.1.0` 了。
 

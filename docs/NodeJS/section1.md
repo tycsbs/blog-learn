@@ -1,9 +1,6 @@
 
 # 源码挖掘： Webpack中用到Node的10个核心基础能力
 
-![image.png | left | 747x353](https://user-gold-cdn.xitu.io/2018/10/7/1664ea5297858012?w=1594&h=753&f=png&s=104353 "")
-
-
 [Webpack v4.23.1](https://webpack.js.org/)，可以把 JS 文件中依赖的各种资源，分门别类的摘立出来，根据一定的配置规则，该编译编译，该合并合并，该压缩压缩，最终生成干干净净的静态资源文件，那么如此强大的 Webpack，又是站在 Node 的生态和能力之上，一定用到了 Node 的诸多能力，结合小册子，这里面我们可以看看它有用到哪些基础但核心的知识呢？
 
 首先我们安装一个命令到本地： `npm i countapi -g`，然后在 webpack 的目录下执行：`countapi ./`：
@@ -83,11 +80,6 @@ Node API Used Times
 作为 Javascript 社区和 Node 社区的成果，毫无疑问，对于 Node 所支持的 Javascript 语法特性的使用，是搭建 Webpack 最核心的语言基础，那么我们需要关注的第一个核心知识就是：在 Node 里面对于 Javascript(ECMA) 的支持程度以及它主要语法特性的使用，在 Webpack 里面，Promise/Class/Arrow Function/Set/Symbol 等等这些现代的 JS 语法特性也是大规模的使用。
 
 Webpack 有着庞大的开发者阵营和用户阵营，意味着他们无论是参与 Node 社区的建设，还是基于 Node 做工具栈技术栈拓展，Javascript 都是逃不掉的必备技能，Webpack 主仓库 6 万行的 JS 代码也说明了这一点。
-
-
-
-![image.png | left | 747x355](https://user-gold-cdn.xitu.io/2018/10/7/1664ea5293d34407?w=2554&h=1214&f=png&s=212786 "")
-
 
 
 ## 2. Node 的模块/CommonJS 规范
@@ -196,11 +188,6 @@ const WebpackOptionsDefaulter = require("./WebpackOptionsDefaulter")
 * 在 write.js 及 graceful-fs 里面，则是 fs 能力的各种封装了
 
 我们来用一张依赖关系图来展示 Webpack 文件操作能力吧：
-
-
-
-![image.png | left | 747x460](https://user-gold-cdn.xitu.io/2018/10/7/1664ea5289d68e2c?w=2122&h=1308&f=png&s=215538 "")
-
 
 可以发现，Node 的 fs 能力作为底层，最终在 webpack 里面，作为插件来支持文件的生成，跨目录的复制转移等等这些骚操作。
 
