@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { loadPage } from './loadPage.mjs'
+import { generateSidebarConfig } from './loadPage.mjs'
+import * as path from 'path'
 
 export default defineConfig({
     title: '白米饭的前端小册子',
@@ -73,4 +74,4 @@ function nav() {
     ]
 }
 
-// loadPage('./NodeJS/*.md')
+console.log(generateSidebarConfig(path.resolve(__dirname, '../')))
