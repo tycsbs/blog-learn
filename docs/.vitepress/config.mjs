@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { loadPage } from './loadPage.mjs'
 
 export default defineConfig({
     title: '白米饭的前端小册子',
@@ -71,3 +72,5 @@ function nav() {
         { text: 'github', link: 'https://github.com/tycsbs/', target: '_blank' }
     ]
 }
+
+// loadPage('./NodeJS/*.md')

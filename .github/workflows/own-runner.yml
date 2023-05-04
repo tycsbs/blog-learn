@@ -1,4 +1,4 @@
-name: 打包应用并上传腾讯云
+name:  服务端self-hosted runner编译
 
 on:
     push:
