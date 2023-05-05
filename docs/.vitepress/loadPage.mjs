@@ -26,7 +26,6 @@ export function generateSidebarConfig(baseDir) {
                 const bNum = parseInt(idx_b ? idx_b[0] : 0)
                 return aNum - bNum
             })
-            console.log(posts)
             
             // 生成导航栏
             const _category = (`/pages/${category}/`)
