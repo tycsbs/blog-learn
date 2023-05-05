@@ -1,5 +1,3 @@
-// const fs = require('fs')
-// const path = require('path')
 import * as fs from 'fs'
 import * as path from 'path'
 // export function loadPage(path) {
@@ -12,25 +10,26 @@ import * as path from 'path'
 // }
 
 export function generateSidebarConfig(baseDir) {
-    const sidebar = {};
+    const sidebar = {}
 
-    const categories = fs.readdirSync(baseDir);
+    const categories = fs.readdirSync(baseDir)
     categories.forEach((category) => {
-        const categoryPath = path.join(baseDir, category);
-        const categoryStats = fs.statSync(categoryPath);
+        const categoryPath = path.join(baseDir, category)
+        const categoryStats = fs.statSync(categoryPath)
         if (categoryStats.isDirectory()) {
-            const posts = fs.readdirSync(categoryPath);
-            sidebar[`/${category}/`] = posts.map((post) => {
-                const postPath = path.join(categoryPath, post);
-                const { birthtime } = fs.statSync(postPath);
-                const title = post.replace('.md', '');
+            const posts = fs.readdirSync(categoryPath)
+            const _category = (`/${category}/`)
+            sidebar[_category] = posts.map((post) => {
+                if(post === '.DS_Store') return
+                const title = post.replace('.md', '')
+                const _link = (`/${category}/${title}`)
                 return {
-                    text: `${title} (${birthtime.getFullYear()}-${birthtime.getMonth() + 1}-${birthtime.getDate()})`,
-                    link: `/${category}/${title}`,
-                };
-            });
+                    text: title,
+                    link: _link
+                }
+            }).filter(Boolean)
         }
-    });
+    })
 
     return sidebar
 }

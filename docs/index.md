@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快读开始
-      link: /NodeJS/section0
+      link: test1/section1
     - theme: alt
       text: View on GitHub
       link: /
