@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快读开始
-      link: test1/section1
+      link: /pages/前端面试之道/1JS%20基础知识点及常考面试题（一）
     - theme: alt
       text: View on GitHub
       link: /
