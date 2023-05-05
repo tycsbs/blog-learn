@@ -10,9 +10,6 @@ hero:
     - theme: brand
       text: 快读开始
       link: /pages/前端面试之道/1JS%20基础知识点及常考面试题（一）
-    - theme: alt
-      text: View on GitHub
-      link: /
 
 features:
   - title: 站在巨人的肩膀上仰望星空
