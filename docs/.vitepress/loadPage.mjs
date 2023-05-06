@@ -13,19 +13,12 @@ export function generateSidebarConfig(baseDir) {
     const sidebar = {}
     const nav = []
 
-    const categories = fs.readdirSync(baseDir)
+    const categories = sortCategory(baseDir)
     categories.forEach((category) => {
         const categoryPath = path.join(baseDir, category)
         const categoryStats = fs.statSync(categoryPath)
         if (categoryStats.isDirectory()) {
-            const posts = fs.readdirSync(categoryPath).sort((a, b) => {
-                // 从字符串中提取数字部分进行比较
-                const idx_a = a.match(/\d+/)
-                const idx_b = b.match(/\d+/)
-                const aNum = parseInt(idx_a ? idx_a[0] : 0)
-                const bNum = parseInt(idx_b ? idx_b[0] : 0)
-                return aNum - bNum
-            })
+            const posts = sortCategory(categoryPath)
             
             // 生成导航栏
             const _category = (`/pages/${category}/`)
@@ -51,3 +44,16 @@ export function generateSidebarConfig(baseDir) {
         nav
     }
 }
+
+function sortCategory(path) {
+    const categories = fs.readdirSync(path).sort((a, b) => {
+        // 从字符串中提取数字部分进行比较
+        const idx_a = a.match(/\d+/)
+        const idx_b = b.match(/\d+/)
+        const aNum = parseInt(idx_a ? idx_a[0] : 0)
+        const bNum = parseInt(idx_b ? idx_b[0] : 0)
+        return aNum - bNum
+    })
+    return categories
+}
+

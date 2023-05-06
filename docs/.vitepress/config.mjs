@@ -17,11 +17,27 @@ export default defineConfig({
     }
 })
 
-
+// 123,45,678910,1112
 function sidebar() {
     const {sidebar, nav} = generateSidebarConfig(path.resolve(__dirname, '../pages'))
+    const _nav = [...nav].map((item) => {
+        item.text = item.text.replace(/\d+/, '')
+        return item
+    })
     Nav.push({
-        text: '前端小册子',
+        text: '面试之道',
+        items: nav.splice(0, 3)
+    })
+    Nav.push({
+        text: 'Vue之道',
+        items: nav.splice(0, 2)
+    })
+    Nav.push({
+        text: '工程之道',
+        items: nav.splice(0, 4)
+    })
+    Nav.push({
+        text: '其他',
         items: nav
     })
     return sidebar
