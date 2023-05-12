@@ -34,7 +34,7 @@ function sidebar() {
     })
     Nav.push({
         text: '工程之道',
-        items: nav.splice(0, 4)
+        items: nav.splice(0, 5)
     })
     Nav.push({
         text: '其他',
