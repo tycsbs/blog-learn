@@ -13,7 +13,7 @@ export default defineConfig({
     ignoreDeadLinks: true,
     lastUpdated: true,
     buildEnd: async ({ outDir }) => {
-        const sitemap = new SitemapStream({ hostname: 'https://laros.io/' })
+        const sitemap = new SitemapStream({ hostname: 'https://baimifan.vip/' })
         const pages = await createContentLoader('*.md').load()
         const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     
